@@ -20,6 +20,8 @@ services:
     env_file:
       - ./hadoop-hive.env
     scale: 2
+    cpu_count: 1
+    mem_limit: 4gb
   hive-server:
     image: bde2020/hive:2.1.0-postgresql-metastore
     container_name: hive-server
